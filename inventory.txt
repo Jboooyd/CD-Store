@@ -1,0 +1,8 @@
+11111, "Hush Hush... - Pussycat Dolls", 12.95
+22222, "Animal - Ke$ha", 9.95
+33333, "Hanging By A Moment - Lifehouse - Single, 4.95
+44444, "Have A Nice Day - Bon Jovi", 9.99
+55555, "Day & Age - Killers", 10.99
+66666, "She Wolf - Shakira", 15.99
+77777, "Dark Horse - Nickelback", 12.99
+88888, "The E.N.D. - Black Eyed Peas", 10.95
