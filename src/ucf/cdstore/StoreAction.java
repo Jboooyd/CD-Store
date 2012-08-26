@@ -40,8 +40,10 @@ public class StoreAction{
 	public StoreAction(){
 		this.mInvoice = new Invoice();
 		
-		if(!mRead)
+		if(!mRead){
 			ReadInventory();
+			mRead = true;
+		}
 	}
 	
 	/**
