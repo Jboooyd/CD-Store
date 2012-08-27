@@ -1,4 +1,4 @@
-CD-Store,
+CD-Store  
 ======== `Due Date: Sunday September 9th by 11:55 pm`
 
 GUI interface for a fictional CD store.
