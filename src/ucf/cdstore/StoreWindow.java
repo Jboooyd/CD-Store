@@ -72,7 +72,7 @@ public class StoreWindow{
     	sPanel  = new JPanel();
 
     	sPanel.setSize(700, 200);
-        sStoreWindow.setSize(760, 200);
+        sStoreWindow.setSize(700, 200);
         
         InitButtons();
         
@@ -230,15 +230,20 @@ public class StoreWindow{
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				sStoreAction.ProcessOrder(sCD, Integer.valueOf(sQuantityTF.getText()), Integer.valueOf(sNumItemsTF.getText()));
-				sNumItemsTF.setEditable(false);
-				sNumItemsTF.setEditable(false);
-				sConfirmItem.setEnabled(true);
-				sProcessItem.setEnabled(false);
-				
-				sIDTF.setText("");
-				sQuantityTF.setText("");
-				sCurrentOrderNumber++;
-				RedrawLabels();
+				if(sCurrentOrderNumber < Integer.valueOf(sNumItemsTF.getText())){
+					sNumItemsTF.setEditable(false);
+					sNumItemsTF.setEditable(false);
+					sConfirmItem.setEnabled(true);
+					sProcessItem.setEnabled(false);
+					
+					sIDTF.setText("");
+					sQuantityTF.setText("");
+					sCurrentOrderNumber++;
+					RedrawLabels();
+				}else{
+					sConfirmItem.setEnabled(false);
+					sProcessItem.setEnabled(false);
+				}
 			}});
     	sConfirmItem.addActionListener(new ActionListener(){
 			@Override
@@ -258,6 +263,7 @@ public class StoreWindow{
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane.showMessageDialog(sPanel, sStoreAction.DisplayInvoice());
 				sStoreAction.WriteInvoice();
+				NewOrderClick();
 			}});
     	sNewOrder.addActionListener(new ActionListener(){
 			@Override

@@ -161,7 +161,7 @@ public class StoreAction{
     	mMessage = mMessage + this.mInvoice.getTimeStamp() + "\n\n";
     	mMessage = mMessage + "Number of line items: " + this.mInvoice.getNumItemsInOrder() + "\n\n";
     	mMessage = mMessage + "Item# / ID / Title / Price / Qty / Disc % / Subtotal:\n\n";
-    	mMessage = mMessage + getDisplayViewOrder() + "\n\n\n\n";
+    	mMessage = mMessage + getDisplayViewOrder() + "\n\n";
     	mMessage = mMessage + "Order subtotal: " + this.mInvoice.getSubtotal() + "\n\n";
     	mMessage = mMessage + "Tax rate:    " + DISPLAY_TAX_RATE + "\n\n";
     	mMessage = mMessage + "Tax amount:    $" + (this.mInvoice.getSubtotal() * TAX) + "\n\n";
